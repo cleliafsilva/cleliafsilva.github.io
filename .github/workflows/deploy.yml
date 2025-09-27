@@ -1,0 +1,33 @@
+name: Deploy Angular to GitHub Pages
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "18"
+
+            - name: Install dependecies
+              run: npm ci
+
+            - name: Build Angular
+              run: npm run build -- --configuration production --output-path=docs --base-href=/
+
+            - name: Commit build to /docs
+              run: |
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  git add docs
+                  git commit -m "Updatting automatic build [skip ci]" || echo "Nothing to commit"
+                  git push
