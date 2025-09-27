@@ -1,0 +1,167 @@
+.faq-head {
+    h2 {
+        margin-bottom: 35px;
+        font-weight: 600;
+        font-size: 25px;
+    }
+}
+.faq-wrap {
+    margin-bottom: 50px;
+
+    &:last-child {
+        margin-bottom: 30px;
+    }
+}
+.accordion { 
+    padding-left: 0;
+    margin: 0;
+    padding: 0;
+
+    button {
+        color: #232323;
+        font-size: 17px;
+        width: 100%;
+        display: block;
+        cursor: pointer;
+        font-weight: 600;
+        text-align: start;
+        background-color: transparent;
+        padding: 15px 0 15px 18px;
+        border: 1px solid #232323;
+        transition: var(--transition);
+
+        &:hover {
+            color: var(--black-color);
+        }
+        &:after {
+            position: absolute;
+            right: 20px;
+            content: "+";
+            top: 10px;
+            color: #232323;
+            font-size: 25px;
+            font-weight: 700;
+        }
+        &.open {
+            &:after {
+                content: '-';
+            }
+        }
+    }
+    div {
+        padding: 20px 45px 15px 20px;
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
+    li {
+        position: relative;
+        list-style-type: none;
+        margin-bottom: 30px;
+
+        &:first-child {
+            border-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.accordion {
+    li {
+        a.active {
+            color: var(--white-color);
+            background-color: var(--gold-color);
+            border: 1px solid var(--gold-color);
+        }
+        a.active:after {
+            content: "-";
+            font-size: 25px;
+            color: var(--white-color);
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .faq-head {
+        h2 {
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+    }
+    .faq-wrap {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+    .accordion { 
+        p {
+            font-size: 14px;
+            padding: 20px 15px 15px 15px;
+        }
+        a {
+            font-size: 14px;
+            padding: 12px 20px 12px 12px;
+
+            &:after {
+                top: 8px;
+                font-size: 21px;
+                right: 8px;
+            }
+        }
+    }
+    .accordion {
+        li {
+            a.active:after {
+                font-size: 21px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .faq-head {
+        h2 {
+            margin-bottom: 22px;
+            font-size: 22px;
+        }
+    }
+    .faq-wrap {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .accordion {
+        p {
+            font-size: 14px;
+        }
+        a {
+            font-size: 16px;
+            padding-right: 20px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -1,0 +1,85 @@
+.error-item {
+    height: 100vh;
+    text-align: center;
+
+    h1 {
+        font-size: 130px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    p {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 35px;
+    }
+    span {
+        display: block;
+    }
+    a {
+        background-color: var(--gold-color);
+        color: var(--white-color);
+        display: inline-block;
+        padding: 20px 45px;
+        margin-top: 70px;
+        font-size: 18px;
+
+        &:hover {
+            background-color: var(--black-color);
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .error-item {
+        height: auto;
+        padding: {
+            top: 150px;
+            bottom: 150px;
+        };
+        h1 {
+            font-size: 70px;
+        }
+        p {
+            font-size: 20px;
+        }
+        a {
+            padding: 14px 30px;
+            margin-top: 35px;
+            font-size: 14px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .error-item {
+        h1 {
+            font-size: 100px;
+        }
+        p {
+            font-size: 25px;
+        }
+        a {
+            padding: 16px 35px;
+            margin-top: 50px;
+            font-size: 15px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

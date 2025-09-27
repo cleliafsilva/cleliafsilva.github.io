@@ -1,0 +1,69 @@
+#toTop {
+    position: fixed;
+    bottom: 30px;
+    right: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+.back-to-top-btn {
+    i {
+        background-color: var(--gold-color);
+        color: var(--white-color);
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        display: inline-block;
+        text-align: center;
+        font-size: 26px;
+        border-radius: 50%;
+        transition: 0.5s all ease;
+        margin-right: 28px;
+        box-shadow: 0px 0px 14px 0px var(--gold-color);
+
+        &:hover {
+            background-color: var(--black-color);
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    #toTop {
+        bottom: 90px;
+    }
+    .back-to-top-btn {
+        i {
+            height: 48px;
+            width: 48px;
+            line-height: 48px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    #toTop {
+        bottom: 50px;
+    }
+    .back-to-top-btn {
+        i {
+            margin-right: 20px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

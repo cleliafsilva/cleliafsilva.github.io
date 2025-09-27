@@ -1,48 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationStart, NavigationCancel, NavigationEnd } from '@angular/router';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { filter } from 'rxjs/operators';
-declare let $: any;
+import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Event, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-root',
+    imports: [RouterOutlet],
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    providers: [
-        Location, {
-            provide: LocationStrategy,
-            useClass: PathLocationStrategy
-        }
-    ]
+    styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
-    location: any;
-    routerSubscription: any;
+export class AppComponent {
 
-    constructor(private router: Router) {
-    }
+    title = 'Lufz - Law Firm & Attorney Angular 19 Template';
 
-    ngOnInit(){
-        this.recallJsFuntions();
-    }
-
-    recallJsFuntions() {
-        this.router.events
-        .subscribe((event) => {
-            if ( event instanceof NavigationStart ) {
-                $('.loader').fadeIn('slow');
+    constructor(
+        public router: Router,
+        private viewportScroller: ViewportScroller
+    ) {
+        this.router.events.subscribe((event: Event) => {
+            if (event instanceof NavigationEnd) {
+                // Scroll to the top after each navigation end
+                this.viewportScroller.scrollToPosition([0, 0]);
             }
         });
-        this.routerSubscription = this.router.events
-        .pipe(filter(event => event instanceof NavigationEnd || event instanceof NavigationCancel))
-        .subscribe(event => {
-            $.getScript('../assets/js/custom.js');
-            $('.loader').fadeOut('slow');
-            this.location = this.router.url;
-            if (!(event instanceof NavigationEnd)) {
-                return;
-            }
-            window.scrollTo(0, 0);
-        });
     }
+
 }

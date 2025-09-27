@@ -1,0 +1,49 @@
+<div class="case-details-tab">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="case-details-tab-item">
+                    <h2>Our study process for this case</h2>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" (click)="switchTab($event, 'tab1')" [ngClass]="{'active': currentTab === 'tab1'}">
+                                Challenge
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" (click)="switchTab($event, 'tab2')" [ngClass]="{'active': currentTab === 'tab2'}">
+                                Solution
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" (click)="switchTab($event, 'tab3')" [ngClass]="{'active': currentTab === 'tab3'}">
+                                Result
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1" *ngIf="currentTab === 'tab1'">
+                            <h3>One problem of criminal activities is accounting for the proceeds without raising the suspicion of law enforcement agencies</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="tab-pane fade show active" id="tab2" *ngIf="currentTab === 'tab2'">
+                            <h3>Now a days criminality is at the top amongst college and university going students.</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="tab-pane fade show active" id="tab3" *ngIf="currentTab === 'tab3'">
+                            <h3>A criminal case, in common law jurisdictions, begins when a person suspected of a crime.</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="case-details-tab-item">
+                    <div class="case-details-tab-img">
+                        <img src="img/home-one/10.png" alt="Case">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
