@@ -5,6 +5,9 @@ on:
         branches:
             - main
 
+permissions:
+    contents: write
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -28,9 +31,7 @@ jobs:
               run: npm run build -- --configuration production --output-path=docs --base-href=/
 
             - name: Commit build to /docs
-              run: |
-                  git config --global user.name "github-actions[bot]"
-                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
-                  git add docs
-                  git commit -m "Updatting automatic build [skip ci]" || echo "Nothing to commit"
-                  git push
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  branch: gh-pages
+                  folder: dist
