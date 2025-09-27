@@ -5,23 +5,23 @@
     text-align: center;
     margin-bottom: 30px;
     padding: 45px 15px;
-    background-color: #1d1c1c;
+    background-color: #FAA492;
     position: relative;
     overflow: hidden;
     color: var(--white-color);
     transition: var(--transition);
 
     &:hover {
-        background-color: #998056;
+        background-color: #303A50;
         transform: translate(0, -10px);
 
         .practice-icon {
             &:before {
-                background-color: #66573e;
+                background-color: #FAA492;
                 transform: rotate(135deg);
             }
             &:after {
-                background-color: #86714d;
+                background-color: #FAA492;
                 transform: rotate(-45deg);
             }
             i {
@@ -47,7 +47,7 @@
             transform: rotate(45deg);
             z-index: -1;
             transition: var(--transition);
-            background-color: #4c4b4b;
+            background-color: #303A50;
         }
         &:after {
             position: absolute;
@@ -62,7 +62,7 @@
             transform: rotate(45deg);
             z-index: -2;
             transition: var(--transition);
-            background-color: #2d2c2c;
+            background-color: #303A50;
         }
         i {
             color: var(--gold-color);

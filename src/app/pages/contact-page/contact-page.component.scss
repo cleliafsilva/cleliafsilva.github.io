@@ -1,13 +1,27 @@
 @use "../../common/contact/contact.component.scss" as *;
+.map-area {
+  display: flex;
+  justify-content: center; /* centraliza */
+}
+
+.map-area .custom-map {
+  width: 71%;
+  height: 450px;
+  border: 0;
+}
 
 .contact-form-four {
     .location-item {
         border: 1px solid var(--gold-color);
         padding: {
-            top: 15px;
-            bottom: 15px;
-            right: 15px;
+            top: 25px;
+            bottom: 25px;
+            right: 25px;   
         };
+
+        width: 390px;
+        height: 150px;
+
         h3 {
             font-size: 22px;
             margin-bottom: 12px;
